@@ -6,64 +6,23 @@
     <title>Image reduction tool</title>
   </head>
   <body>
-    <div class="block">
-      <h1 id="irt">Image reduction tool</h1>
-      <span class="material-icons setting" id="setting">settings</span><br>
-    </div>
+    <h1>Image reduction tool</h1>
     <input class="hidden" type="radio" name="reduceFlag" value="1" checked>
     <input class="input" id="imageSize1" type="number" placeholder="Width(px)">
     <input class="input" type="text" name="" id="file_name" placeholder="File name(.jpg)"><br>
     <label class="file" for="file" id="button" onclick="input_click">
       <span class="material-icons get_app">publish</span>
-      <span id="sai">Select an image</span>
+      <span>Select an image</span>
     </label>
     <input class="file-img" type="file" id="file" accept="image/*">
-    <button class="button" onclick="downloadCanvas()" id="down"><span class="material-icons get_app">get_app</span><span id="download">Download</span></button>
-    <button class="button" type="button" name="button" id="ref"><span class="material-icons get_app">refresh</span><span id="reset">Reset</span></button>
+    <button class="button" onclick="downloadCanvas()" id="down"><span class="material-icons get_app">get_app</span>Download</button>
+    <button class="button" type="button" name="button" id="ref"><span class="material-icons get_app">refresh</span>Reset</button>
     <a class="hidden" id="hiddenLink" download="canvas.png">link</a>
     <div class="img"></div>
     <p><span id="input_1" class="hidden"></span><span id="east" class="hidden"></span><span id="input_2" class="hidden"></span></p>
     <p id="hint1">4896×3264 → width=1224</p>
     <p id="hint2">3264×4896 → width=1000</p>
     <canvas class="hidden" id="targetCanvas"></canvas>
-    <div class="modal" id="modal">
-      <div class="modal-background" id="m-b"></div>
-      <div class="modal-contents" id="m-c">
-        <div class="left" id="left">
-          <div class="modal-clear" id="clear"><span class="material-icons clear">clear</span></div><p class="set" id="set">Setting</p>
-          <p class="left-con" id="langage">Langage</p>
-          <p class="left-con" id="display">Display</p>
-          <p class="left-con" id="data">Data</p>
-        </div>
-        <div class="right">
-          <div class="right-contents" id="d-langage">
-            <p class="right-title" id="r-langage">Langage</p>
-            <p class="right-con" id="en">English<span class="material-icons check" id="c-en">check</span></p>
-            <p class="right-con" id="ja">日本語<span class="material-icons check" id="c-ja">check</span></p>
-          </div>
-          <div class="right-contents" id="d-display">
-            <p class="right-title" id="r-display">Display</p>
-            <p class="right-con" id="def">
-              <span class="color def"></span><span id="t-def">Default</span>
-              <span class="material-icons check" id="c-def">check</span>
-            </p>
-            <p class="right-con" id="dark">
-              <span class="color dark"></span><span id="t-dark">Dark</span>
-              <span class="material-icons check" id="c-dark">check</span>
-            </p>
-          </div>
-          <div class="right-contents" id="d-data">
-            <p class="right-title" id="data">Data</p>
-            <p class="right-con" id="del">Delete data</p>
-          </div>
-        </div>
-        <div id="del-data">
-          <p id="del-q">Do you want to delete the data?</p>
-          <button type="button" id="del-no">No</button>
-          <button type="button" id="del-yes">Yes</button>
-        </div>
-      </div>
-    </div>
     <script src="jquery.min.js"></script>
     <script src="compression.js" charset="utf-8"></script>
     <script src="setting.js" charset="utf-8"></script>
