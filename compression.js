@@ -25,8 +25,6 @@ file_image.addEventListener('change', function() {
         const hidden = ('hidden');
         document.getElementById('down').classList.add('is-active');
         document.getElementById('ref').classList.add('is-active');
-        document.getElementById('hint1').classList.add(hidden);
-        document.getElementById('hint2').classList.add(hidden);
         document.getElementById('input_1').classList.remove(hidden);
         document.getElementById('input_2').classList.remove(hidden);
         document.getElementById('east').classList.remove(hidden);
@@ -60,30 +58,20 @@ $('#button').on('click', function(){
   $('#file').click()
 })
 
-// function input_click() {
-//   document.getElementById('file').click()
-// };
-
-
-//ファイル名取得
+//ファイル名取得してvalueに突っ込む
 window.addEventListener('DOMContentLoaded', function() {
-// 指定されると動くメッソド
-document.querySelector("#file").addEventListener('change', function(e) {
-// ブラウザーがFile APIを利用できるか確認
-if (window.File) {
-// 指定したファイルの情報を取得
-var input = document.querySelector('#file').files[0];
-// 最後に、反映
-document.querySelector('#file_name').value = input.name;
-}
-}, true);
+  document.querySelector("#file").addEventListener('change', function(e) {
+    if (window.File) {
+      var input = document.querySelector('#file').files[0];
+      document.querySelector('#file_name').value = input.name;
+    }
+  }, true);
 });
 
 
 $('#button,#ref').on('click', function(){
   $('img').remove();
   $('#input_1,#input_2,#east').addClass('hidden');
-  $('#hint1,#hint2').removeClass('hidden');
   $('#down,#ref').removeClass('is-active');
   $('#file_name').val('')
 });
