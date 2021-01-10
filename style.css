@@ -95,6 +95,11 @@ input[type=number]{
   -moz-appearance:textfield
 }
 
+input[type="text"] {
+ -webkit-appearance: none;
+}
+
+
 h1 {
   font-weight: normal;
   text-align: center;
