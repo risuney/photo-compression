@@ -70,7 +70,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
 
 $('#button,#ref').on('click', function(){
-  $('img').remove();
+  $('div.img').empty();
   $('#input_1,#input_2,#east').addClass('hidden');
   $('#down,#ref').removeClass('is-active');
   $('#file_name').val('')
