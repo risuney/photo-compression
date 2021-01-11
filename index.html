@@ -5,19 +5,23 @@
     <meta name="robots" content="noindex,nofollow">
     <link rel="stylesheet" href="style.css">
     <title>Image reduction tool</title>
-    <link rel="shortcut icon" href="icon.ico">
+    <link rel="shortcut icon" href="./file/icon.ico">
   </head>
   <body>
     <h1>Image reduction tool</h1>
     <input type="number" class="input" id="imageSize" placeholder="Width(px)">
     <input class="input" type="text" name="" id="file_name" placeholder="File name(.jpg)"><br>
     <label class="file" id="button">
-      <span class="material-icons get_app">publish</span>
+      <img class="material-icons" src="./file/publish-white-18dp.svg" alt="">
       <span>Select an image</span>
     </label>
     <input class="file-img" type="file" id="file" accept="image/*">
-    <button class="button" onclick="downloadCanvas()" id="down"><span class="material-icons get_app">get_app</span>Download</button>
-    <button class="button" type="button" name="button" id="ref"><span class="material-icons get_app">refresh</span>Reset</button>
+    <button class="button" onclick="downloadCanvas()" id="down">
+      <img class="material-icons" src="./file/get_app-white-18dp.svg" alt="">
+      Download</button>
+    <button class="button" type="button" name="button" id="ref">
+      <img class="material-icons" src="./file/refresh-white-18dp.svg" alt="">
+      Reset</button>
     <a class="hidden" id="hiddenLink" download="canvas.png">link</a>
     <div class="img"></div>
     <p><span id="input_1" class="hidden"></span><span id="east" class="hidden"></span><span id="input_2" class="hidden"></span></p>

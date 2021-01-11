@@ -32,35 +32,13 @@
   background-color: #ff3466
 }
 
-@font-face {
-  font-family: 'Material Icons';
-  font-style: normal;
-  font-weight: 400;
-  src: url(flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
-}
-
 .material-icons {
-  font-family: 'Material Icons';
-  color: #fff;
-  font-size: 24px;
-
-  /* WebKitブラウザサポート */
-  -webkit-font-smoothing: antialiased;
-  /* Chrome、Safariサポート */
-  text-rendering: optimizeLegibility;
-
-  /* Firefoxサポート */
-  -moz-osx-font-smoothing: grayscale;
-
-  /* IEサポート */
-  font-feature-settings: 'liga';
-}
-
-.get_app {
+  width: 24px;
+  height: 24px;
   vertical-align: -0.3rem;
   margin-right: 0.3rem;
+  margin-top: 0px;
 }
-
 
 .file-img {
   display: none;
